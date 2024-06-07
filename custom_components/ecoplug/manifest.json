@@ -1,7 +1,8 @@
 {
   "domain": "ecoplug",
   "name": "Ecoplug",
-  "documentation": "https://github.com/gbealmer/pyecoplug/",
+  "documentation": "https://github.com/lucaspopp0/ecoplug",
+  "issue_tracker": "https://github.com/lucaspopp0/ecoplug/issues",
   "dependencies": [],
   "codeowners": [],
   "requirements": ["pyecoplug==0.0.5"],
