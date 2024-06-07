@@ -1,6 +1,6 @@
 import logging
 
-from homeassistant.const import (DEVICE_DEFAULT_NAME, ATTR_HIDDEN, EVENT_TIME_CHANGED, EVENT_HOMEASSISTANT_STOP)
+from homeassistant.const import (DEVICE_DEFAULT_NAME, ATTR_HIDDEN, EVENT_HOMEASSISTANT_STOP)
 from homeassistant.components.switch import SwitchEntity
 from homeassistant.helpers.entity import ToggleEntity
 from homeassistant.helpers.event import track_time_change
@@ -32,18 +32,18 @@ class EcoPlugSwitch(SwitchEntity):
     def is_on(self):
         self.update()
         return self._state
-        
+
     @property
     def state(self):
         if self._state:
             return "on"
         return "off"
-        
+
     @property
     def unique_id(self):
         """Return a unique ID."""
         return self._unique_id
-    
+
     @property
     def device_state_attributes(self):
         """Return the device state attributes."""
@@ -66,7 +66,7 @@ class EcoPlugSwitch(SwitchEntity):
         _LOGGER.info('update')
         self._state = self._plug.is_on()
 
-    
+
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
     from pyecoplug import EcoDiscovery
