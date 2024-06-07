@@ -19,7 +19,6 @@ jobs:
     secrets: inherit
 
   tag-and-release:
-    needs: [validate-hacs]
     runs-on: ubuntu-latest
     steps:
       -
