@@ -1,0 +1,24 @@
+name: hacs-validate
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+
+  validate-hacs:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        uses: actions/checkout@v4
+      -
+        name: HACS validation
+        uses: hacs/action@main
+        with:
+          category: "integration"

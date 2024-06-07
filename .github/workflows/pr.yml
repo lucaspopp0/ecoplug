@@ -1,0 +1,17 @@
+name: release
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+
+  validate-hacs:
+    uses: ./.github/workflows/hacs-validate.yml
+    secrets: inherit
