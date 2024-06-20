@@ -7,7 +7,7 @@ from homeassistant.helpers.event import track_time_change
 
 DEFAULT_INVERT_LOGIC = False
 
-DOMAIN = 'ecoplug'
+DOMAIN = 'wion_ecoplug'
 REQUIREMENTS = ['pyecoplug==0.0.5']
 _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL = 5
@@ -88,4 +88,3 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         disco.stop()
 
     hass.bus.listen_once(EVENT_HOMEASSISTANT_STOP, stop_disco)
-
