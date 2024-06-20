@@ -1,0 +1,10 @@
+{
+  "domain": "wion_ecoplug",
+  "name": "Wion Ecoplug",
+  "documentation": "https://github.com/lucaspopp0/ha-wion-ecoplug",
+  "issue_tracker": "https://github.com/lucaspopp0/ha-wion-ecoplug/issues",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": ["pyecoplug==0.0.5"],
+  "version": "1.0.0"
+}
